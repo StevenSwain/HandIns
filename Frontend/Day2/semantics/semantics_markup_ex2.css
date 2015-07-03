@@ -1,0 +1,49 @@
+p {
+font-family:david;
+font-size:15px;
+}
+.wrapper {
+margin: 0 auto;
+width: 960px;
+height: 600px;
+background-color: tan;
+}
+
+.left_column {
+width: 960px;
+position:absolute;
+}
+
+.header_number {
+font-family:MS Gothic;
+color:white;
+font-size:125px;
+margin-top:-8px;
+padding-left:15px;
+float:left;
+position:absolute;
+}
+
+header {
+background-color:#FE543C;
+height:100px;
+width:960px;
+}
+
+.header_text {
+margin-left:50px;
+font-family:MS Gothic;
+font-size:45px;
+padding-left:40px;
+padding-top:10px;
+position:absolute;
+}
+
+.header_article {
+padding-left:8px;
+}
+
+h2 {
+color:#F0766A;
+font-family:david;
+}

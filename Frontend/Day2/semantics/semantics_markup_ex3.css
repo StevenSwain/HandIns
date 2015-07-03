@@ -1,0 +1,51 @@
+.wrapper {
+margin: 0 auto;
+width: 600px;
+height: 400px;
+}
+
+header {
+width:100%;
+height:20%;
+background-color:#F6F908;
+border-radius: 15px;
+}
+
+nav {
+margin-top:2%;
+width:20%;
+height:100%;
+background-color:#F85607;
+border-radius: 15px;
+}
+
+.content {
+margin-top:2%;
+width:78%;
+height:100%;
+float:right;
+background-color:#D9EFBB;
+border-radius: 15px;
+}
+
+footer {
+margin-top:2%;
+width:100%;
+height:10%;
+background-color:#EEBAEF;
+border-radius: 15px;
+}
+
+.post {
+margin-left:5%;
+width:90%;
+height:20%;
+margin-top:9%;
+background-color:#BBF0ED;
+border-radius: 15px;
+}
+
+h2 {
+font-size:16px;
+text-align: center;
+}
