@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="dk">
+<head>
+	<meta charset=utf-8" />
+	<title>Javascript Exercises</title>
+	<meta name="keywords" content="JavaScript, HTML5, example">
+	<meta name="description" content="A JavaScript example">
+	<meta name="author" content="Steven Swain">
+
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="style/style.css" />
+	<script>
+	var messageStr = "This is a string";
+	
+	function messageFunction() {
+		var count=0;
+			for(i=0;i<messageStr.length;i++){
+				count++;
+			}
+			alert("The sentence '" + messageStr + "' has " + count + " letters");
+	}
+	
+	function writeMessage() {
+	var element = document.getElementById("print");
+		for (i = 0; i < messageStr.length; i++) {
+			element.innerHTML = document.write(messageStr.charAt(i));
+		}
+	}
+	
+	function findT () {
+	var element = document.getElementById("showFindLetterT");
+	var count = 0;
+	var letter = 't';
+	var validateStr = messageStr.toLowerCase();
+	
+		for (i = 0; i < validateStr.length; i++) {
+			if(validateStr.charAt(i)==letter){
+				count++;
+			}		
+		}
+		element.innerHTML = document.write('Number of letter t\'s in the sentence \"'+ messageStr + '\" = '+count);
+	}
+	
+	function countLetters() {
+	var sentence = document.getElementById('textInput').value.toLowerCase();
+	
+		if(sentence!='') {
+
+		var chosenLetter = document.getElementById('alphabet').value;
+		var count=0;
+		var i = 0;
+		
+			while(i<sentence.length) {
+				if(sentence.charAt(i)==chosenLetter) {
+					count++;
+				}
+				i++;
+			}
+			
+			if(count==1) {
+				message = ("There is " + count + " \"" + chosenLetter + "\" in the sentence");
+				}
+			else{
+				message = ("There are " + count + " \"" + chosenLetter + "'s\" in the sentence");
+				}
+			alert(message);
+		}
+		else {
+			alert('Please enter a sentence');
+		}
+	}
+
+	</script>
+</head>
+<body>
+	<section class="wrapper">
+	<header>
+		<h1>JavaScript Exercises</h1>
+	</header>
+	<section class="main">
+		<article class="exercise">
+			<header>
+				<h2>JavaScript Exercise 1</h2>
+			</header>
+			<section>
+				<p>This exercise writes the length of the text string "This is a text" in an alert box</p>
+				<p id="textMessage" onclick="messageFunction()"><b>Click on Me!</b></p>
+			</section>
+		</article>
+		<article class="exercise">
+			<header>
+				<h2>JavaScript Exercise 2</h2>
+			</header>
+			<section>
+				<p>This exercise makes a JavaScript loop that writes the characters in the text string with a document.write() metode</p>
+			<p id="print" onclick="writeMessage()"><b>Click to see message</b></p>
+			</section>
+		</article>
+		<article class="exercise">
+			<header>
+				<h2>JavaScript Exercise 3</h2>
+			</header>
+			<section>
+				<p>This exercise outputs how many times the character 'T' is used in the text string</p>
+				<p id="showFindLetterT" onclick="findT()"><b>How many letter T's in the sentence 'This is a string'?</b></p>
+			</section>
+		</article>
+		<article class="exercise">
+			<header>
+				<h2>JavaScript Extra Exercise</h2>
+			</header>
+			<section>
+				<p>This exercise outputs how many times a selected character is used in a text string</p>
+				<p>Input text below</p>
+				<textarea name="tekst" cols="100" rows="5" id="textInput"></textarea>
+				<p>Pick the letter to be counted in the text:</p>
+				<select name="alphabet" id="alphabet" form="validateForm">
+					<option value="a">A</option>
+					<option value="b">B</option>
+					<option value="c">C</option>
+					<option value="d">D</option>
+					<option value="e">E</option>
+					<option value="f">F</option>
+					<option value="g">G</option>
+					<option value="h">H</option>
+					<option value="i">I</option>
+					<option value="j">J</option>
+					<option value="k">K</option>
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="n">N</option>
+					<option value="o">O</option>
+					<option value="p">P</option>
+					<option value="q">Q</option>
+					<option value="r">R</option>
+					<option value="s">S</option>
+					<option value="t">T</option>
+					<option value="u">U</option>
+					<option value="v">V</option>
+					<option value="w">W</option>
+					<option value="x">X</option>
+					<option value="y">Y</option>
+					<option value="z">Z</option>
+					<option value="æ">Æ</option>
+					<option value="ø">Ø</option>
+					<option value="å">Å</option>
+				</select>
+				<input type="submit" form="validateForm" name="submit" value="Count" onclick="countLetters()">
+			</section>
+		</article>
+	</section>
+	<aside>
+		<nav>
+		<p>Menu</p>
+		</nav>
+	</aside>
+	<footer>
+		<header>Footer</header>
+	</footer>
+</section>
+</body>
+</html>
